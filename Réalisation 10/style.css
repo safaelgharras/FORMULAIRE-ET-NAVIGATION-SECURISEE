@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6b1e2d, #e8d8c3);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    background: linear-gradient(180deg, #fffaf4, #f1e3d3);
+    padding: 40px;
+    min-width: 420px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card h1 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.logout-btn {
+    padding: 12px 30px;
+    font-size: 15px;
+}
+
+.card {
+    background: linear-gradient(180deg, #fffaf4, #f1e3d3);
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    text-align: center;
+    color: #6b1e2d;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #6b1e2d;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+label {
+    color: #6b1e2d;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 2px solid #cbb7a3;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #6b1e2d;
+    box-shadow: 0 0 8px rgba(107,30,45,0.5);
+    outline: none;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6b1e2d, #8a2f42);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(107,30,45,0.4);
+}
