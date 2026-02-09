@@ -1,20 +1,20 @@
 <?php
-session_start();
+ session_start(); // pour stocker les infos d'utilisateur entre les pages sans elle on peut pas utiliser session
 
-$erreur = "";
+$erreur = ""; // une variable vide se remplie automatiquement si y a une erreur 
 
-if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $pseudo = trim($_POST['pseudo']);
+if($_SERVER["REQUEST_METHOD"] === "POST"){ // se code ne fonctionne quand on clique sur se connecter et si la requette est envoyée par la méthode post
+    $pseudo = trim($_POST['pseudo']); // valeur envoyée depuis form ; trim pour les espaces gauches et droites 
 
-    if(empty($pseudo)){
-        $erreur = 'Le pseudo est obligatoire !';
-    }else{
-        $_SESSION['pseudo'] = $pseudo;
+    if(empty($pseudo)){ // vérifier si le pseudo est vide = true 
+        $erreur = 'Le pseudo est obligatoire !'; // si oui afficher l'erreur dans la variable qu'on a laisser vide 
+    }else{ // si pseudo n'est pas vide cette else fonctionne 
+        $_SESSION['pseudo'] = $pseudo; // stocker pseudo dans session 
 
-        setcookie('pseudo', $pseudo, time() + 3600 );
+        setcookie('pseudo', $pseudo, time() + 3600 ); // garder le pseudo wakha browser ytsed, une cookie reste pour une heure 
 
-        header("Location: acceuil.php" );
-        exit;
+        header("Location: acceuil.php" ); //après un login successible en prend l'utilisateur a la page d'acceuil
+        exit; // pour terminer l'execution du code 
 
     }
 }
